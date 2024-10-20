@@ -1,0 +1,46 @@
+/* Apply background image only to body or html */
+body, html {
+    background-image: url('./images/serene-forest-nature-images-hd_LRM.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100%;
+    margin: 0;
+}
+
+/* Centering the text */
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(244, 244, 244, 0.8); /* Optional background with transparency */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom Alert Styles */
+.custom-alert {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#alert-image {
+    max-width: 100%;
+    height: auto;
+}

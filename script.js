@@ -7,7 +7,7 @@ let pet = {
     hunger: 0,    
 
     // Method to feed the pet
-    feed() {
+    Feed() {
         if (this.hunger > 0) {
             this.hunger -= 20;
             if (this.hunger < 0) this.hunger = 0; // Hunger can't be negative
@@ -18,7 +18,7 @@ let pet = {
     },
 
     // Method to play with the pet
-    play() {
+    Play() {
         if (this.happiness < 100) {
             this.happiness += 20;
             if (this.happiness > 100) this.happiness = 100; // Happiness can't exceed 100
@@ -29,7 +29,7 @@ let pet = {
     },
 
     // Method to age the pet
-    agePet() {
+    AgePet() {
         this.age += 1;
         this.happiness -= 5;
         this.hunger += 10;
@@ -41,6 +41,7 @@ let pet = {
     }
 };
 
+
 // Function to start the game and interact with the pet
 function startGame() {
     pet.name = prompt("What is your pet's name?");
@@ -51,32 +52,34 @@ function startGame() {
 
 
     let playing = true;
-    while (playing) {
-        let action = prompt(`What would you like to do with ${pet.name}? Choose an action:
-        1. Feed
-        2. Play
-        3. Age
-        4. Quit`);
+while (playing) {
+    let action = prompt(`What would you like to do with ${pet.name}? Choose an action:
+    1. Feed
+    2. Play
+    3. Age
+    4. Quit`);
 
-        switch (action) {
-            case "1":
-                pet.feed();
-                break;
-            case "2":
-                pet.play();
-                break;
-            case "3":
-                pet.agePet();
-                break;
-            case "4":
-                alert(`Goodbye! Thanks for taking care of ${pet.name}.`);
-                playing = false;
-                break;
-            default:
-                alert("Invalid option! Please choose again.");
-        }
+    switch (action) {
+        case "1":
+            pet.feed();
+            break;
+        case "2":
+            pet.play();
+            break;
+        case "3":
+            pet.agePet();
+            break;
+        case "4":
+            alert(`Goodbye! Thanks for taking care of ${pet.name}.`);
+            playing = false;
+            break;
+        default:
+            alert("Invalid option! Please choose again.");
     }
 }
-
 // Start the game by calling the function
 startGame();
+
+}
+
+
