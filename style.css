@@ -1,46 +1,22 @@
-/* Apply background image only to body or html */
-body, html {
-    background-image: url('./image/serene-forest-nature-images-hd_LRM.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 100%;
-    margin: 0;
+body {
+    background-image: url('./image/serene-forest-nature-images-hd_LRM.jpg'); /* Ensure the path is correct */
+background-size: cover; /* Make the background cover the entire viewport */
+background-repeat: no-repeat; /* Prevent the image from repeating */
+background-position: center; /* Center the image */
+min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+margin: 0; /* Remove default body margin */
+color: white; /* Change text color for contrast */
+font-family: Arial, sans-serif; /* Set a font for better aesthetics */
 }
 
-/* Centering the text */
+
 .centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: antiquewhite;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px; /* Rounded corners */
-}
-
-/* Custom Alert Styles */
-.custom-alert {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    justify-content: center;
-    align-items: center;
-}
-
-.alert-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#alert-image {
-    max-width: 100%;
-    height: auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: antiquewhite;
+padding: 20px;
+text-align: center;
+border-radius: 10px; /* Rounded corners */
 }
